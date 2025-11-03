@@ -19,6 +19,10 @@ const quicksand = Quicksand({
 export const metadata: Metadata = {
   title: "A Message Across Time",
   description: "A personal letter preserved in time",
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: "A Message Across Time",
     description: "A personal letter preserved in time",

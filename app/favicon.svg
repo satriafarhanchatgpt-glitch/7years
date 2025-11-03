@@ -28,6 +28,9 @@
     </filter>
   </defs>
   
+  <!-- Background circle for better visibility -->
+  <circle cx="50" cy="50" r="48" fill="#F0F9F0" opacity="0.95"/>
+  
   <!-- Gentle curved branch -->
   <path d="M 30 70 Q 40 60, 45 50 Q 48 42, 50 35 Q 52 28, 55 20 Q 58 10, 65 5" 
         stroke="url(#branch)" 
@@ -149,3 +152,4 @@
     <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
   </circle>
 </svg>
+

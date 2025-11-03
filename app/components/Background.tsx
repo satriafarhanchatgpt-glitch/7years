@@ -148,19 +148,7 @@ function AcaciaTree({
         ))}
       </motion.div>
 
-      {/* Trunk - Narrow and slightly curved */}
-      <div className={`${sizes[size].trunk} bg-gradient-to-r from-ghibli-tree-dark via-ghibli-tree to-ghibli-tree-dark relative rounded-sm`}>
-        {/* Bark texture */}
-        <div className="absolute inset-0 opacity-30">
-          {[...Array(8)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-full h-0.5 bg-ghibli-tree-dark/50"
-              style={{ top: `${i * 12}%` }}
-            />
-          ))}
-        </div>
-      </div>
+      {/* Trunk removed for floating foliage effect */}
     </motion.div>
   );
 }
@@ -312,30 +300,27 @@ export default function Background() {
       <Bird delay={15} />
       <Bird delay={25} />
 
-      {/* Ghibli-style rolling hills - now filling properly */}
+      {/* Beautiful curved rolling hills - three layers for depth */}
       <motion.div 
         className="absolute bottom-0 left-0 right-0 h-full"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        {/* Base layer - fills the lower portion completely */}
-        <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-b from-ghibli-grass/30 to-transparent" />
-
-        {/* Far hills - soft green */}
+        {/* Far hills - different rolling pattern */}
         <svg
           viewBox="0 0 1440 320"
           className="absolute bottom-0 w-full h-full"
           preserveAspectRatio="none"
         >
           <path
-            fill="#7BC873"
+            fill="#8DD482"
             opacity="0.6"
-            d="M0,160L120,145C240,130,480,100,720,110C960,120,1200,170,1320,195L1440,220L1440,320L0,320Z"
+            d="M0,180L120,170C240,160,480,140,720,150C960,160,1200,200,1320,220L1440,240L1440,320L0,320Z"
           />
         </svg>
 
-        {/* Mid-range hills - lush green */}
+        {/* Mid-range hills - smooth curves */}
         <svg
           viewBox="0 0 1440 320"
           className="absolute bottom-0 w-full h-full"
@@ -343,12 +328,12 @@ export default function Background() {
         >
           <path
             fill="#77B36E"
-            opacity="0.8"
+            opacity="0.75"
             d="M0,200L80,190C160,180,320,160,480,165C640,170,800,200,960,210C1120,220,1280,210,1360,205L1440,200L1440,320L0,320Z"
           />
         </svg>
 
-        {/* Closer hills - vibrant green */}
+        {/* Closer hills - gentle curves */}
         <svg
           viewBox="0 0 1440 320"
           className="absolute bottom-0 w-full h-full"
@@ -356,8 +341,8 @@ export default function Background() {
         >
           <path
             fill="#68B55E"
-            opacity="0.9"
-            d="M0,240L60,235C120,230,240,220,360,225C480,230,600,250,720,255C840,260,960,250,1080,240C1200,230,1320,220,1380,215L1440,210L1440,320L0,320Z"
+            opacity="0.85"
+            d="M0,240L60,232C120,224,240,208,360,216C480,224,600,256,720,264C840,272,960,256,1080,240C1200,224,1320,208,1380,200L1440,192L1440,320L0,320Z"
           />
         </svg>
       </motion.div>
