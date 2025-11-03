@@ -9,7 +9,7 @@ export default function NotFound() {
           Page Not Found
         </h2>
         <p className="text-lg text-savanna-text/80 mb-8">
-          The page you're looking for doesn't exist in this timeline.
+          The page you&apos;re looking for doesn&apos;t exist in this timeline.
         </p>
         <Link
           href="/"
