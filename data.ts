@@ -27,6 +27,6 @@ export const messageData = {
       
       "Keep being the best version of yourself.",
     ],
-    signature:  G",
+    signature:  "G",
   };
   
